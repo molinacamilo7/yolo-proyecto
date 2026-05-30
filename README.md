@@ -1,11 +1,11 @@
-# 🔐 Sistema de Inventario Visual de Telecomunicaciones (Por favor revisar todos los repositorios de la izquierda: Matriz de riesgos, declaracion aplicabilidad)
+# Sistema de Inventario Visual de Telecomunicaciones (Por favor revisar todos los repositorios de la izquierda: Matriz de riesgos, declaracion aplicabilidad)
 ### ISO/IEC 27001:2022 | YOLOv8 + AES-256 + RSA-2048 + SQLite
 
 > Detección automática de activos de red (switches, routers, firewalls, cámaras IP) con cifrado híbrido y trazabilidad de auditoría, alineado a ISO 27001.
 
 ---
 
-## 📌 Descripción del Sistema
+## Descripción del Sistema
 
 Este sistema implementa los **Módulos 1 y 2** de un proyecto de seguridad de la información:
 
@@ -24,7 +24,7 @@ Imagen/Video → YOLO (detección) → AES-256 (cifrar imagen) → RSA (cifrar c
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 yolo-inventario/
@@ -78,7 +78,7 @@ python sistema_inventario.py
 
 ---
 
-## 🤖 Entrenamiento del modelo YOLO (opcional)
+## Entrenamiento del modelo YOLO
 
 Si no tienes `best.pt`, el sistema corre en **modo simulado** (genera detecciones aleatorias para pruebas).
 
@@ -104,7 +104,7 @@ cp runs/detect/train/weights/best.pt ./best.pt
 
 ---
 
-## 🔒 Seguridad — Controles ISO 27001 Implementados
+## Seguridad — Controles ISO 27001 Implementados
 
 | Control | Implementación |
 |---------|---------------|
@@ -115,7 +115,7 @@ cp runs/detect/train/weights/best.pt ./best.pt
 | **A.5.9** Inventario de activos | Propósito central del sistema |
 | **A.7.9** Activos fuera de instalaciones | Diseño para operación en campo |
 
-### ⚠️ Archivos sensibles — NUNCA subir a Git
+### Archivos sensibles — NUNCA subir a Git
 
 ```
 clave_privada.pem   ← Compromete TODA la confidencialidad
@@ -125,7 +125,7 @@ best.pt             ← Modelo propietario (>100MB)
 
 ---
 
-## 📊 Documentación de Auditoría
+## Documentación de Auditoría
 
 Los documentos de cumplimiento ISO 27001 están en `/docs/`:
 
@@ -134,7 +134,7 @@ Los documentos de cumplimiento ISO 27001 están en `/docs/`:
 
 ---
 
-## 🚀 Uso básico
+## Uso básico
 
 ```bash
 # Procesar todas las imágenes y videos en ./imagenes/
@@ -153,7 +153,7 @@ for row in conn.execute('SELECT nombre_archivo, fecha_deteccion, detecciones_jso
 
 ---
 
-## 🛡️ Riesgos principales identificados
+## Riesgos principales identificados
 
 | # | Riesgo | Nivel | Estado |
 |---|--------|-------|--------|
