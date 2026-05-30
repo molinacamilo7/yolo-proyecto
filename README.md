@@ -4,6 +4,20 @@
 > Detección automática de activos de red (switches, routers, firewalls, cámaras IP) con cifrado híbrido y trazabilidad de auditoría, alineado a ISO 27001.
 
 ---
+Inventario de Activos — ¿El modelo YOLO logró listar todos los routers y switches? ¿Ayuda a mantener un inventario actualizado?
+Sí, el modelo YOLO entrenado logró detectar y clasificar los activos de telecomunicaciones presentes en las imágenes y el video, incluyendo routers, switches, firewalls y cámaras IP. Cada detección queda registrada automáticamente en la base de datos con fecha, nombre del archivo y porcentaje de confianza, lo que permite tener un inventario actualizado sin necesidad de registrarlo manualmente. Cada vez que se ejecuta el sistema con nuevas imágenes, el inventario se actualiza solo con los activos nuevos, evitando duplicados.
+
+Uso aceptable de activos — ¿El software de detección solo se usa para inventario?
+Sí, el software desarrollado tiene un único propósito: detectar activos de red en imágenes y videos para construir un inventario visual. No tiene funciones de acceso remoto, modificación de configuraciones ni interacción con los equipos detectados. Su uso está limitado al análisis visual y al almacenamiento cifrado de evidencias, lo cual está alineado con el principio de uso aceptable de activos que establece la ISO 27001.
+
+Transferencia de información — ¿Se aplicó el cifrado del Módulo 2 al enviar los datos?
+Sí. Antes de almacenar cualquier imagen en la base de datos, el sistema aplica cifrado híbrido: la imagen se cifra con AES-256 y la clave AES se protege con RSA de 2048 bits. Esto simula el escenario donde un técnico toma una foto en campo y la envía a una central de auditoría — si alguien intercepta los datos, no puede acceder a las imágenes originales. Adicionalmente se calcula un hash SHA-256 por cada imagen para verificar que no fue modificada durante la transmisión. Esto cumple directamente con el control A.10 de criptografía de la ISO 27001.
+
+Etiquetado de activos — ¿Las fotos sirven como etiqueta visual del equipo?
+Sí. Cada foto registrada en el sistema funciona como evidencia visual del activo, mostrando su apariencia física, ubicación aproximada dentro de la imagen mediante las coordenadas del bounding box, y la clase a la que pertenece. Esto permite identificar visualmente un equipo específico sin necesidad de etiquetas físicas adicionales, y facilita auditorías futuras donde se necesite verificar que el activo físico corresponde al registrado en el inventario.
+
+Protección contra malware — ¿El ordenador donde corre YOLO tiene antivirus?
+Sí, el equipo utilizado para ejecutar el sistema cuenta con Windows Defender activo, que es el antivirus integrado de Windows. Esto es importante porque el sistema procesa imágenes y videos externos que podrían contener archivos maliciosos. Tener protección activa contra malware es un control complementario que refuerza la seguridad del entorno donde opera el sistema, en línea con los controles de seguridad tecnológica de la ISO 27001.
 
 ## Descripción del Sistema
 
