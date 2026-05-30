@@ -1,0 +1,14 @@
+clave_privada.pem
+*.pem
+*.key
+inventario.db
+*.db
+backups/
+*.pt
+imagenes/*.jpg
+imagenes/*.png
+imagenes/*.mp4
+__pycache__/
+*.pyc
+runs/
+.env
