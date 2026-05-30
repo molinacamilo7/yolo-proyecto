@@ -1,4 +1,4 @@
-# 🔐 Sistema de Inventario Visual de Telecomunicaciones (Por favor revisar todos los repositorios de la izquierda: Matriz de risgos, declaracion aplicabilidad)
+# 🔐 Sistema de Inventario Visual de Telecomunicaciones (Por favor revisar todos los repositorios de la izquierda: Matriz de riesgos, declaracion aplicabilidad)
 ### ISO/IEC 27001:2022 | YOLOv8 + AES-256 + RSA-2048 + SQLite
 
 > Detección automática de activos de red (switches, routers, firewalls, cámaras IP) con cifrado híbrido y trazabilidad de auditoría, alineado a ISO 27001.
